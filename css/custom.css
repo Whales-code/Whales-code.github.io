@@ -7,3 +7,28 @@
 .post-content p {
     display: none; 
 }
+
+/* 1. 隐藏文章元数据（发布时间、分类等小字） */
+.post-meta { display: none !important; }
+
+/* 2. 代码块圆角+阴影（适配代码宇宙壁纸） */
+.hljs {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1) !important;
+  background: rgba(0, 0, 0, 0.8) !important;  /* 暗黑背景 */
+  color: #0f0 !important;  /* 高亮绿色代码 */
+}
+
+/* 3. 适配「代码宇宙」壁纸（可选） */
+#page-header {
+  background-image: url(/img/sky.jpg) !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0.7;
+    }
+}
