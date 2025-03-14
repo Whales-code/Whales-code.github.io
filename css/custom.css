@@ -2,4 +2,8 @@
 .hljs {
     border-radius: 12px !important;
     padding: 1.2rem !important;
-  }
+}
+
+.post-content p {
+    display: none; 
+}
