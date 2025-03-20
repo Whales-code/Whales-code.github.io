@@ -1,4 +1,4 @@
-/* 代码高亮字体 */
+/* 代码高亮字体
 :root {
   --hl-color: #24292e;
   --hl-bg: rgb(246 248 250);
@@ -66,4 +66,4 @@
 
 .hljs-strong {
   font-weight: bold;
-}
+} */
