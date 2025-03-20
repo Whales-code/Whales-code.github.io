@@ -1,69 +1,75 @@
-/* ==================================
-   程序员博客主题样式（代码宇宙版）
-   适配 Hexo Butterfly 主题
-   ================================== */
+:root {
+  --hl-color: #d3af86;      /*代码框字体顔色 【必须】 (把下面.hljs的 color复製到这里来)*/
+  --hl-bg: #221a0f;         /*代码框背景色 【必须】 (把下面.hljs的 background复製到这里来)*/
+  --hltools-bg: #321a0f;    /*代码框顶部工具栏背景色 【可选】(如果你关掉了 copy、lang 和 shrink,可不用配置这个）*/
+  --hltools-color: #fff;    /*代码框顶部工具栏字体顔色 【可选】(如果你关掉了 copy、lang 和 shrink,可不用配置这个）*/
+  --hlnumber-bg: #221a0f;   /*代码框行数背景色 【可选】(如果已经关掉 line_number,可以不用配置这个)*/
+  --hlnumber-color: #fff;   /*代码框行数字体顔色 【可选】 (如果已经关掉 line_number,可以不用配置这个)*/
+  --hlscrollbar-bg: #d3af86;/*代码框滚动条顔色 【可选】（默认为主题主顔色）*/
+  --hlexpand-bg: #d3af86;   /*代码框底部展开背景色 【可选】(如果已经关掉 highlight_height_limit,可以不用配置这个)*/
+}
+/*
 
-/* ------------------------------
-   1. 元素隐藏（精简页面）
------------------------------- */
-.post-meta {
-    display: none !important; /* 隐藏文章元数据（时间、分类等） */
-  }
-  
-  /* .post-content p {
-    display: none; ！！！谨慎使用！！！隐藏文章正文段落（默认注释，取消注释需确认需求）
-  } */
-  
-  /* ------------------------------
-     2. 代码块美化（科技感）
-  ------------------------------ */
-  .hljs {
-    /* 基础样式 */
-    border-radius: 12px !important;    /* 圆角 */
-    padding: 1.2rem 1.5rem !important; /* 内边距（上下 1.2rem，左右 1.5rem） */
-    
-    /* 主题适配样式 */
-    background: rgba(0, 0, 0, 0.8) !important; /* 暗黑半透明背景 */
-    color: #0f0 !important;                /* 高亮绿色代码 */
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1) !important; /* 青色外阴影 */
-    font-family: 'JetBrains Mono', monospace !important; /* 代码字体 */
-  }
-  
-  /* ------------------------------
-     3. 页面头部背景（代码宇宙壁纸）
-  ------------------------------ */
-  #page-header {
-    background-image: url(/img/sky.jpg) !important; /* 背景图路径（需提前放入 source/img） */
-    background-size: cover !important;             /* 覆盖屏幕 */
-    background-attachment: fixed !important;       /* 固定背景，滚动时不随内容移动 */
-    min-height: 60vh !important;                   /* 头部最小高度（避免内容遮挡） */
-  }
-  
-  /* ------------------------------
-     4. 鼠标点击特效动画（代码雨）
-  ------------------------------ */
-  @keyframes fall {
-    from {
-      transform: translateY(-10vh) rotate(0deg); /* 起始位置：上方 10vh，无旋转 */
-      opacity: 1;
-    }
-    to {
-      transform: translateY(100vh) rotate(45deg); /* 结束位置：底部，旋转 45° */
-      opacity: 0.7; /* 半透明消失 */
-    }
-  }
-  
-  /* ------------------------------
-     5. 暗黑模式适配（可选）
-  ------------------------------ */
-  @media (prefers-color-scheme: dark) {
-    /* 全局暗黑模式优化（可根据实际主题调整） */
-    body {
-      background: #1a1a1a !important;
-      color: #ffffff !important;
-    }
-    /* 避免背景图被暗黑模式反色 */
-    #page-header {
-      filter: none !important;
-    }
-  }
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs {
+  background: white;
+  color: black;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+  color: #a31515;
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+  color: #2b91af;
+}
+
+.hljs-doctag {
+  color: #808080;
+}
+
+.hljs-attr {
+  color: #f00;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #00b0e8;
+}
+
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
