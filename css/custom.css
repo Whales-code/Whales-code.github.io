@@ -1,69 +1,23 @@
-/* 代码高亮字体
-:root {
-  --hl-color: #24292e;
-  --hl-bg: rgb(246 248 250);
-  --hltools-bg: #49b1f587;
-  --hltools-color: #ffffff;
-  --hlnumber-bg: rgb(235 239 241);
-  --hlnumber-color: #221a0f52;
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
 }
-.hljs {
-  background: white;
-  color: black;
+#page-header {
+  background: transparent !important;
 }
 
-.hljs-comment,
-.hljs-quote,
-.hljs-variable {
-  color: #008000;
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-built_in,
-.hljs-name,
-.hljs-tag {
-  color: #00f;
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
 }
-
-.hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-literal,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type,
-.hljs-addition {
-  color: #a31515;
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
 }
-
-.hljs-deletion,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-meta {
-  color: #2b91af;
-}
-
-.hljs-doctag {
-  color: #808080;
-}
-
-.hljs-attr {
-  color: #f00;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link {
-  color: #00b0e8;
-}
-
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-} */
