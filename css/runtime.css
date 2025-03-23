@@ -1,0 +1,13 @@
+div#runtime {
+    width: fit-content;
+    color: #fff;
+    padding: 0 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0px 5px 0px 5px;
+}
+
+[data-theme="dark"] div#runtime {
+    color: #28b4c8;
+    box-shadow: 0 0 5px rgba(26, 66, 209, 0.71);
+}
