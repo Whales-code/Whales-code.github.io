@@ -250,8 +250,3 @@ div#archive {
   div.search-dialog span.search-close-button:hover {
     color: #f84040;
   }
-
-
-  .search-box.hidden {
-    display: none !important;
-}
