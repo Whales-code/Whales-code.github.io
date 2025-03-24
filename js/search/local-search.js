@@ -307,7 +307,9 @@ window.addEventListener('load', () => {
     setTimeout(() => { input.focus() }, 300)
     if (!loadFlag) {
       !localSearch.isfetched && localSearch.fetchData()
-      input.addEventListener('input', inputEventFunction)
+      if (input) {
+        input.addEventListener('input', inputEventFunction);
+      }
       loadFlag = true
     }
     // shortcut: ESC
@@ -330,11 +332,17 @@ window.addEventListener('load', () => {
   }
 
   const searchClickFn = () => {
-    btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', openSearch)
+    const searchButton = document.querySelector('#search-button > .search');
+    if (searchButton) {
+      btf.addEventListenerPjax(searchButton, 'click', openSearch);
+    }
   }
 
   const searchFnOnce = () => {
-    document.querySelector('#local-search .search-close-button').addEventListener('click', closeSearch)
+    const closeButton = document.querySelector('#local-search .search-close-button');
+    if (closeButton) {
+      closeButton.addEventListener('click', closeSearch);
+    }
     $searchMask.addEventListener('click', closeSearch)
     if (GLOBAL_CONFIG.localSearch.preload) {
       localSearch.fetchData()
