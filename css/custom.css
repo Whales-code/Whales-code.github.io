@@ -213,40 +213,4 @@ div#archive {
 
 
 
-  /* 修改本地搜索样式 */
-  div#local-search .search-dialog{
-    border-radius: 10px;
-    color: rgb(20, 20, 20);
-    border: 1px solid #98d3d370;
-    /* box-shadow: 5px 5px 5px #a0a0a0; */
-    /*底色*/
-    background-color:#ffffffaa;
-    /*chrome2+,safari4+;multiplecolorstops*/
-    background-image:-webkit-gradient(linear,leftbottom,righttop,color-stop(0.32,#ce1ef170),color-stop(0.66,#0fe9e970),color-stop(0.83,#3e76aa70));
-    /*chrome10+,safari5.1+*/
-    background-image:-webkit-linear-gradient(45deg,#ce1ef170,#0fe9e970,#3e76aa70);
-    /*firefox;multiplecolorstops*/
-    background-image:-moz-linear-gradient(45deg,#ce1ef170,#0fe9e970,#3e76aa70);
-  }
-  a.search-result-title{
-    font-size: 18px;
-  }
-  [data-theme="dark"]
-    a.search-result-title{
-      color: rgb(37, 37, 37) !important;
-    }
-  div.local-search__hit-item a:hover{
-    color: rgb(230, 84, 17) !important;
-  }
-  span.search-keyword{
-    color: rgb(230, 17, 45) !important;
-  }
-  p.search-result{
-    font-size: 17px;
-  }
-  div.search-dialog__title{
-    color: rgb(230, 17, 45) !important;
-  }
-  div.search-dialog span.search-close-button:hover {
-    color: #f84040;
-  }
+
