@@ -235,7 +235,7 @@ class LocalSearch {
 }
 
 window.addEventListener('load', () => {
-  // Search
+// Search
   const { path, top_n_per_article, unescape, languages } = GLOBAL_CONFIG.localSearch
   const localSearch = new LocalSearch({
     path,
@@ -243,21 +243,9 @@ window.addEventListener('load', () => {
     unescape
   })
 
-  const input = document.querySelector('#local-search-input input');
-  if (!input) {
-    console.error('Element #local-search-input input not found');
-    return;
-  }
-  const statsItem = document.getElementById('local-search-stats-wrap');
-  if (!statsItem) {
-    console.error('Element #local-search-stats-wrap not found');
-    return;
-  }
-  const $loadingStatus = document.getElementById('loading-status');
-  if (! $loadingStatus) {
-    console.error('Element #loading-status not found');
-    return;
-  }
+  const input = document.querySelector('#local-search-input input')
+  const statsItem = document.getElementById('local-search-stats-wrap')
+  const $loadingStatus = document.getElementById('loading-status')
   const isXml = !path.endsWith('json')
 
   const inputEventFunction = () => {
@@ -269,7 +257,7 @@ window.addEventListener('load', () => {
     const container = document.getElementById('local-search-results')
     let resultItems = []
     if (searchText.length > 0) {
-      // Perform local searching
+    // Perform local searching
       resultItems = localSearch.getResultItems(keywords)
     }
     if (keywords.length === 1 && keywords[0] === '') {
@@ -302,16 +290,8 @@ window.addEventListener('load', () => {
   }
 
   let loadFlag = false
-  const $searchMask = document.getElementById('search-mask');
-  if (! $searchMask) {
-    console.error('Element #search-mask not found');
-    return;
-  }
-  const $searchDialog = document.querySelector('#local-search .search-dialog');
-  if (! $searchDialog) {
-    console.error('Element #local-search .search-dialog not found');
-    return;
-  }
+  const $searchMask = document.getElementById('search-mask')
+  const $searchDialog = document.querySelector('#local-search .search-dialog')
 
   // fix safari
   const fixSafariHeight = () => {
@@ -350,21 +330,11 @@ window.addEventListener('load', () => {
   }
 
   const searchClickFn = () => {
-    const searchButton = document.querySelector('#search-button > .search');
-    if (searchButton) {
-      btf.addEventListenerPjax(searchButton, 'click', openSearch);
-    } else {
-      console.error('Element #search-button > .search not found');
-    }
+    btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', openSearch)
   }
 
   const searchFnOnce = () => {
-    const closeButton = document.querySelector('#local-search .search-close-button');
-    if (closeButton) {
-      closeButton.addEventListener('click', closeSearch);
-    } else {
-      console.error('Element #local-search .search-close-button not found');
-    }
+    document.querySelector('#local-search .search-close-button').addEventListener('click', closeSearch)
     $searchMask.addEventListener('click', closeSearch)
     if (GLOBAL_CONFIG.localSearch.preload) {
       localSearch.fetchData()
@@ -388,4 +358,3 @@ window.addEventListener('load', () => {
     searchClickFn()
   })
 })
-    
