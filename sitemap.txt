@@ -9,5 +9,5 @@ https://whales-code.github.io/about/index.html
 https://whales-code.github.io/2025/03/12/hello-world/
 https://whales-code.github.io/
 https://whales-code.github.io/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/
-https://whales-code.github.io/categories/%E7%AE%97%E6%B3%95/
 https://whales-code.github.io/categories/%E6%95%B0%E5%AD%A6/
+https://whales-code.github.io/categories/%E7%AE%97%E6%B3%95/
