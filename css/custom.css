@@ -211,6 +211,8 @@ div#archive {
   color: #ffffff;
 }
 
-
+#drone .container {
+  overflow: hidden;
+}
 
 
