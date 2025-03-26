@@ -229,10 +229,12 @@ div#archive {
   backdrop-filter: var(--backdrop-filter);
   padding: 4px;
   border-radius: 4px;
+  color: white;
 }
 [data-theme="dark"] #fps {
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: var(--backdrop-filter);
   padding: 4px;
   border-radius: 4px;
+  color: white;
 }
