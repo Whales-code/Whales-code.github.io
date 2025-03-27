@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://whales.xin/2025/03/27/test/</loc>
-    
-    <lastmod>2025-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://whales.xin/categories/index.html</loc>
     
     <lastmod>2025-03-22</lastmod>
@@ -56,36 +47,9 @@
   </url>
   
   <url>
-    <loc>https://whales.xin/2025/03/27/test3/</loc>
-    
-    <lastmod>2025-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://whales.xin/2025/03/27/test1/</loc>
-    
-    <lastmod>2025-03-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://whales.xin/about/index.html</loc>
     
     <lastmod>2025-03-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://whales.xin/2025/03/27/hello-world/</loc>
-    
-    <lastmod>2025-03-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
