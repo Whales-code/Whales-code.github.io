@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://whales.xin/2025/04/07/%E7%AE%97%E6%B3%95%E6%B8%85%E5%8D%95/</loc>
+    
+    <lastmod>2025-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://whales.xin/2025/03/24/XJTUPC-2024-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2025-04-07</lastmod>
@@ -92,6 +101,13 @@
 
   
   <url>
+    <loc>https://whales.xin/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://whales.xin/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -112,14 +128,14 @@
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://whales.xin/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</loc>
+    <loc>https://whales.xin/categories/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-
   
   <url>
     <loc>https://whales.xin/categories/%E7%AE%97%E6%B3%95/</loc>
@@ -130,13 +146,6 @@
   
   <url>
     <loc>https://whales.xin/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
-    <lastmod>2025-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://whales.xin/categories/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
