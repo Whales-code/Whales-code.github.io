@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>神经网络基础</title>
+    <url>/2025/04/07/%E4%BE%9D%E5%AD%98%E5%8F%A5%E6%B3%95%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="什么是依存句法分析"><a href="#什么是依存句法分析" class="headerlink" title="什么是依存句法分析"></a>什么是依存句法分析</h1><ul>
+<li>依存句法分析是一种分析一个句子中单词与单词之间的语法关系，并将其表示为树形结构的任务。</li>
+<li><strong>核心是分析句子中词语之间的依存关系</strong></li>
+</ul>
+<h1 id="依存树的结构"><a href="#依存树的结构" class="headerlink" title="依存树的结构"></a>依存树的结构</h1><ul>
+<li>形式上是一个有向无环图（DAG），通常是单一根结构的树</li>
+<li>每个单词除了根节点，最多只有一个head</li>
+<li>通常附带依存标签说明关系类型</li>
+<li>依存句法认为“谓语”中的动词是一个句子的中心，其他成分与动词直接或间接地产生联系。</li>
+</ul>
+<h1 id="依存句法分析的方法"><a href="#依存句法分析的方法" class="headerlink" title="依存句法分析的方法"></a>依存句法分析的方法</h1><h2 id="基于转移的依存分析"><a href="#基于转移的依存分析" class="headerlink" title="基于转移的依存分析"></a>基于转移的依存分析</h2><h3 id="核心思想：将句子分析过程视为一系列状态转移"><a href="#核心思想：将句子分析过程视为一系列状态转移" class="headerlink" title="核心思想：将句子分析过程视为一系列状态转移"></a>核心思想：将句子分析过程视为一系列状态转移</h3><h4 id="使用数据结构：栈（stack）-缓冲区（buffer）-依存弧（arcs）"><a href="#使用数据结构：栈（stack）-缓冲区（buffer）-依存弧（arcs）" class="headerlink" title="使用数据结构：栈（stack）+ 缓冲区（buffer）+ 依存弧（arcs）"></a>使用数据结构：栈（stack）+ 缓冲区（buffer）+ 依存弧（arcs）</h4><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol>
+<li>SHIFT：将词从缓冲区移动到栈顶</li>
+<li>LEFT-ARC：将栈顶词作为被支配词，和次栈顶词建立依存关系</li>
+<li>RIGHT-ARC：将次栈顶词作为被支配词，和栈顶词建立依存关系</li>
+</ol>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>速度快，线性复杂度 $O(n)$</li>
+<li>可训练出强大的模型</li>
+</ul>
+<h2 id="神经依存分析方法"><a href="#神经依存分析方法" class="headerlink" title="神经依存分析方法"></a>神经依存分析方法</h2><h3 id="神经方法就是把依存分析这事，交给一个能“自己学语法规律”的神经网络模型去做。"><a href="#神经方法就是把依存分析这事，交给一个能“自己学语法规律”的神经网络模型去做。" class="headerlink" title="神经方法就是把依存分析这事，交给一个能“自己学语法规律”的神经网络模型去做。"></a>神经方法就是把依存分析这事，交给一个能“自己学语法规律”的神经网络模型去做。</h3><h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><ol>
+<li>每个词变向量：把句子中的每个词表示成词向量。</li>
+<li>编码上下文：使用神经网络提取整个句子的上下文信息。</li>
+<li>预测结构：根据编码结果，去预测每对词之间的依存关系。</li>
+</ol>
+<h2 id="基于图的方法"><a href="#基于图的方法" class="headerlink" title="基于图的方法"></a>基于图的方法</h2><h4 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h4><ul>
+<li>计算每个单词的每个可能的依赖关系（中心词的选择）的分数</li>
+<li>使用全局评分函数（可结合神经网络对边进行评分）</li>
+<li>使用最大生成树算法</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大模型</category>
+      </categories>
+      <tags>
+        <tag>-大模型 -自然语言处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>不定积分公式</title>
     <url>/2025/03/16/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="1-int-kdx-kx-C-k是常数"><a href="#1-int-kdx-kx-C-k是常数" class="headerlink" title="1. $\int kdx=kx+C　(k是常数)$"></a>1. $\int kdx=kx+C　(k是常数)$</h2><h2 id="2-int-x-mu-dx-frac-x-mu-1-mu-1-C-mu-ne-1"><a href="#2-int-x-mu-dx-frac-x-mu-1-mu-1-C-mu-ne-1" class="headerlink" title="2. $\int x^{\mu } dx=\frac{x^{\mu+1} }{\mu+1} +C　(\mu\ne -1)$"></a>2. $\int x^{\mu } dx=\frac{x^{\mu+1} }{\mu+1} +C　(\mu\ne -1)$</h2><h2 id="3-int-frac-dx-x-ln-left-x-right-C"><a href="#3-int-frac-dx-x-ln-left-x-right-C" class="headerlink" title="3. $\int \frac{dx}{x} =\ln_{}{\left |x  \right | } +C$"></a>3. $\int \frac{dx}{x} =\ln_{}{\left |x  \right | } +C$</h2><h2 id="4-int-frac-1-1-x-2-dx-arctan-x-C"><a href="#4-int-frac-1-1-x-2-dx-arctan-x-C" class="headerlink" title="4. $\int \frac{1}{1+x^{2} } dx=\arctan x+C$"></a>4. $\int \frac{1}{1+x^{2} } dx=\arctan x+C$</h2><h2 id="5-int-frac-1-sqrt-1-x-2-dx-arcsin-x-C"><a href="#5-int-frac-1-sqrt-1-x-2-dx-arcsin-x-C" class="headerlink" title="5. $\int \frac{1}{\sqrt{1-x^{2} } } dx=\arcsin x+C$"></a>5. $\int \frac{1}{\sqrt{1-x^{2} } } dx=\arcsin x+C$</h2><h2 id="6-int-cos-xdx-sin-x-C"><a href="#6-int-cos-xdx-sin-x-C" class="headerlink" title="6. $\int \cos xdx=\sin x+C$"></a>6. $\int \cos xdx=\sin x+C$</h2><h2 id="7-int-sin-xdx-cos-x-C"><a href="#7-int-sin-xdx-cos-x-C" class="headerlink" title="7. $\int \sin xdx=-\cos x+C$"></a>7. $\int \sin xdx=-\cos x+C$</h2><h2 id="8-int-frac-dx-cos-x-2-int-sec-2-xdx-tan-x-C"><a href="#8-int-frac-dx-cos-x-2-int-sec-2-xdx-tan-x-C" class="headerlink" title="8. $\int \frac{dx}{\cos x^{2} } =\int \sec^{2} xdx=\tan x+C$"></a>8. $\int \frac{dx}{\cos x^{2} } =\int \sec^{2} xdx=\tan x+C$</h2><h2 id="9-int-frac-dx-sin-x-2-int-csc-2-xdx-cot-x-C"><a href="#9-int-frac-dx-sin-x-2-int-csc-2-xdx-cot-x-C" class="headerlink" title="9. $\int \frac{dx}{\sin x^{2} } =\int \csc^{2} xdx=- \cot x+C$"></a>9. $\int \frac{dx}{\sin x^{2} } =\int \csc^{2} xdx=- \cot x+C$</h2><h2 id="10-int-sec-x-tan-xdx-sec-x-C"><a href="#10-int-sec-x-tan-xdx-sec-x-C" class="headerlink" title="10. $\int \sec x\tan xdx=\sec x+C$"></a>10. $\int \sec x\tan xdx=\sec x+C$</h2><h2 id="11-int-csc-x-cot-xdx-csc-x-C"><a href="#11-int-csc-x-cot-xdx-csc-x-C" class="headerlink" title="11. $\int \csc x\cot xdx=- \csc x+C$"></a>11. $\int \csc x\cot xdx=- \csc x+C$</h2><h2 id="12-int-e-x-dx-e-x-C"><a href="#12-int-e-x-dx-e-x-C" class="headerlink" title="12. $\int e^{x} dx=e^{x}+C$"></a>12. $\int e^{x} dx=e^{x}+C$</h2><h2 id="13-int-a-x-dx-frac-a-x-ln-a-C"><a href="#13-int-a-x-dx-frac-a-x-ln-a-C" class="headerlink" title="13. $\int a^{x} dx=\frac{a^{x}}{\ln_{}{a} } +C$"></a>13. $\int a^{x} dx=\frac{a^{x}}{\ln_{}{a} } +C$</h2><h2 id="14-int-tan-xdx-ln-left-cos-x-right-C"><a href="#14-int-tan-xdx-ln-left-cos-x-right-C" class="headerlink" title="14. $\int \tan xdx=-\ln_{}{\left |\cos x  \right | } +C$"></a>14. $\int \tan xdx=-\ln_{}{\left |\cos x  \right | } +C$</h2><h2 id="15-int-cot-xdx-ln-left-sin-x-right-C"><a href="#15-int-cot-xdx-ln-left-sin-x-right-C" class="headerlink" title="15. $\int \cot xdx=\ln_{}{\left |\sin x  \right | } +C$"></a>15. $\int \cot xdx=\ln_{}{\left |\sin x  \right | } +C$</h2><h2 id="16-int-sec-xdx-ln-left-sec-x-tan-x-right-C"><a href="#16-int-sec-xdx-ln-left-sec-x-tan-x-right-C" class="headerlink" title="16. $\int \sec xdx=\ln_{}{\left |\sec x+\tan x  \right | } +C$"></a>16. $\int \sec xdx=\ln_{}{\left |\sec x+\tan x  \right | } +C$</h2><h2 id="17-int-csc-xdx-ln-left-csc-x-cot-x-right-C"><a href="#17-int-csc-xdx-ln-left-csc-x-cot-x-right-C" class="headerlink" title="17. $\int \csc xdx=\ln_{}{\left |\csc x-\cot x  \right | } +C$"></a>17. $\int \csc xdx=\ln_{}{\left |\csc x-\cot x  \right | } +C$</h2><h2 id="18-int-frac-1-a-2-x-2-dx-frac-1-a-arctan-frac-x-a-C"><a href="#18-int-frac-1-a-2-x-2-dx-frac-1-a-arctan-frac-x-a-C" class="headerlink" title="18. $\int \frac{1}{a^{2}+x^{2} } dx=\frac{1}{a} \arctan \frac{x}{a} +C$"></a>18. $\int \frac{1}{a^{2}+x^{2} } dx=\frac{1}{a} \arctan \frac{x}{a} +C$</h2><h2 id="19-int-frac-1-x-2-a-2-dx-frac-1-2a-ln-left-frac-x-a-x-a-right-C"><a href="#19-int-frac-1-x-2-a-2-dx-frac-1-2a-ln-left-frac-x-a-x-a-right-C" class="headerlink" title="19. $\int \frac{1}{x^{2}-a^{2} } dx=\frac{1}{2a} \ln_{}{\left |\frac{x-a}{x+a}  \right | } +C $"></a>19. $\int \frac{1}{x^{2}-a^{2} } dx=\frac{1}{2a} \ln_{}{\left |\frac{x-a}{x+a}  \right | } +C $</h2><h2 id="20-int-frac-1-a-2-x-2-dx-frac-1-2a-ln-left-frac-a-x-a-x-right-C"><a href="#20-int-frac-1-a-2-x-2-dx-frac-1-2a-ln-left-frac-a-x-a-x-right-C" class="headerlink" title="20. $\int \frac{1}{a^{2}-x^{2} } dx=\frac{1}{2a}\ln_{}{\left | \frac{a+x}{a-x}  \right | }  +C$"></a>20. $\int \frac{1}{a^{2}-x^{2} } dx=\frac{1}{2a}\ln_{}{\left | \frac{a+x}{a-x}  \right | }  +C$</h2><h2 id="21-int-frac-1-sqrt-a-2-x-2-dx-arcsin-frac-x-a-C"><a href="#21-int-frac-1-sqrt-a-2-x-2-dx-arcsin-frac-x-a-C" class="headerlink" title="21. $\int \frac{1}{\sqrt{a^{2}-x^{2} } } dx=\arcsin \frac{x}{a} +C$"></a>21. $\int \frac{1}{\sqrt{a^{2}-x^{2} } } dx=\arcsin \frac{x}{a} +C$</h2><h2 id="22-int-frac-1-sqrt-x-2-pm-a-2-dx-ln-left-x-sqrt-x-2-pm-a-2-right-C"><a href="#22-int-frac-1-sqrt-x-2-pm-a-2-dx-ln-left-x-sqrt-x-2-pm-a-2-right-C" class="headerlink" title="22. $\int \frac{1}{\sqrt{x^{2}\pm a^{2}  } } dx=\ln_{}{\left | x+\sqrt{x^{2}\pm a^{2}  } \right | } +C$"></a>22. $\int \frac{1}{\sqrt{x^{2}\pm a^{2}  } } dx=\ln_{}{\left | x+\sqrt{x^{2}\pm a^{2}  } \right | } +C$</h2><p><img src="https://img.dexbug.com/i/2025/03/16/xxejlw.png" alt="5c2c39418213545c2daab4936c91ba6f"></p>
